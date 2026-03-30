@@ -9,7 +9,7 @@ function App() {
   
   return (
     <>
-<Suspense fallback={<h3>Loading....</h3> }>
+<Suspense fallback={<h3 style={{display: "flex", justifyContent:"center"}}>Loading....</h3> }>
   <Countries countriesPromise={countriesPromise}></Countries>
 </Suspense>
     </>

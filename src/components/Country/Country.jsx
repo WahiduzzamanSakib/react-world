@@ -1,8 +1,10 @@
 import { useState } from "react";
 
 
-const Country = ({ country }) => {
+const Country = ({country, handleVisited , visitedFlags}) => {
     const [visited, setVisited] = useState(false);
+
+
 
     const handleClick = () => {
         // 1. system
@@ -18,6 +20,7 @@ const Country = ({ country }) => {
 
         // 3. system
         setVisited(!visited)
+        handleVisited(country)
     }
     return (
         <div className={`country , ${visited ? "visited1" : false} `}>
@@ -27,7 +30,8 @@ const Country = ({ country }) => {
             <h4>Population: {country.population.population}</h4>
             <h4>Area: {country.area.area} {country.area.area > 300000 ? "Big Country" : "Smell Country"}</h4>
 
-            <button onClick={handleClick} className='btn1'>{visited ? "Visited" : "Not Visited"}</button>
+            <button onClick={handleClick}   className='btn1'>{visited ? "Visited" : "Not Visited"}</button>
+            <button onClick={() =>{visitedFlags(country.flags.flags.png)}} className="btn2">Add Visited Flag</button>
         </div>
     );
 };

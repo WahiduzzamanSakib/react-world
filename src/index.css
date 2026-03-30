@@ -27,6 +27,12 @@ body {
   padding: 10px;
   color: blue;
 }
+.btn2{
+  background-color: gray;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+}
 
 .visited1{
   background-color: aquamarine;
